@@ -17,11 +17,11 @@ namespace GBC_Travel_Group_76.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        
         public IActionResult Index()
         {
-            var carrent = _context.CarRent.ToList();
-            return View(carrent);
+            
+            return View();
         }
 
         [HttpGet]

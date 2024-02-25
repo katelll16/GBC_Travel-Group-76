@@ -7,7 +7,7 @@ namespace GBC_Travel_Group_76.Models
     {
         [Key]
         public int Id { get; set; }
-
+        [Required]
         public string Airline { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }

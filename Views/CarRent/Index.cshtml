@@ -1,7 +1,6 @@
 ﻿@model IEnumerable<GBC_Travel_Group_76.Models.CarRent>
 @{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Car Rental Page";
 }
 
 <h1>Booking List</h1>
@@ -15,20 +14,20 @@
             <th>Booking Date</th>            
         </tr>    
     <tbody>
-        @foreach (var CarRentBooking in Model)
+        @foreach (var CarRent in Model)
         {
             <tr>
-                <td>@CarRentBooking.Model</td>
-                <td>@CarRentBooking.PickUpLocation</td>
-                <td>@CarRentBooking.DropOffLocation</td>
+                <td>@CarRent.Model</td>
+                <td>@CarRent.PickUpLocation</td>
+                <td>@CarRent.Price</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@CarRentBooking.Model">Details</a> |
-                    <a asp-action="Edit" asp-route-id="@CarRentBooking.PickUpLocation">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@CarRentBooking.DropOffLocation">Delete</a>
+                    <a asp-action="Details" asp-route-id="@CarRent.Model">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@CarRent.PickUpLocation">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@CarRent.DropOffLocation">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-action="Create" class="btn btn-primary">New Booking</a>
+<a asp-action="Create" class="btn btn-primary">New Car Booked</a>

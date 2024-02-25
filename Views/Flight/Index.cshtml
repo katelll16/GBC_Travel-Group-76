@@ -1,36 +1,44 @@
-﻿@model IEnumerable<GBC_Travel_Group_76.Models.Booking>
-@{
-    ViewData["Title"] = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model IEnumerable<GBC_Travel_Group_76.Models.Flight>
 
-<h1>Booking List</h1>
+<h1>Flights</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Booking ID</th>
-            <th>User Name</th>
-            <th>Flight ID</th>
-            <th>Booking Date</th>
-            <th>Actions</th>
+            <th>ID</th>
+            <th>Airline</th>
+            <th>Origin</th>
+            <th>Destination</th>
+            <th>DepertureDateTime</th>
+            <th>ArrivalDateTime</th>            
+            <th>Price</th>
+            <th>Price</th>
         </tr>
     </thead>
+
     <tbody>
-        @foreach (var booking in Model)
+        @foreach (var Flight in Model)
         {
             <tr>
-                <td>@booking.PassengerId</td>                
-                <td>@booking.FlightId</td>
-                <td>@booking.PassengerName</td>
+                <td>@Flight.Id</td>
+                <td>@Flight.Airline</td>
+                <td>@Flight.Origin</td>
+                <td>@Flight.Destination</td>
+                <td>@Flight.DepartureDateTime</td>
+                <td>@Flight.ArrivalDateTime</td>
+                <td>@Flight.Passengers</td>
+                <td>@Flight.SeatNumber</td>
+                <td>@Flight.Price</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@booking.PassengerId">Details</a> |
-                    <a asp-action="Edit" asp-route-id="@booking.PassengerId">Edit</a> |
-                    <a asp-action="Delete" asp-route-id="@booking.PassengerId">Delete</a>
+                    <a asp-action="Details" asp-route-id="@Flight.Id" class="btn btn-info">Details</a>
+                    <a asp-action="Edit" asp-route-id="@Flight.Id" class="btn btn-secondary">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@Flight.Id" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-action="Create" class="btn btn-primary">New Booking</a>
+<p>
+    <a asp-controller="Flight" asp-action="Create" class="btn btn-primary">Create</a>
+</p>

@@ -1,28 +1,36 @@
 ﻿@model GBC_Travel_Group_76.Models.Flight
 
-@{
-    ViewData["Title"] = "Flight Details";
-}
+<h2>Flight Details</h2>
 
-<h1>@ViewData["Title"]</h1>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Airline</dt>
+        <dd class="col-sm-10">@Model.Airline</dd>
 
-<div class="card">
-    <div class="card-body">
-        <h3 class="card-title">@Model.Airline</h3>       
+        <dt class="col-sm-2">Departure Airport</dt>
+        <dd class="col-sm-10">@Model.Origin</dd>
 
-        <dl class="row">          
+        <dt class="col-sm-2">Destination Airport</dt>
+        <dd class="col-sm-10">@Model.Destination</dd>
 
-            <dt class="col-sm-3">Departure Date & Time</dt>
-            <dd class="col-sm-9">@Model.DepartureDateTime.ToString("MM/dd/yyyy HH:mm")</dd>
+        <dt class="col-sm-2">Departure Time</dt>
+        <dd class="col-sm-10">@Model.DepartureDateTime</dd>
 
-            <dt class="col-sm-3">Arrival Date & Time</dt>
-            <dd class="col-sm-9">@Model.ArrivalDateTime.ToString("MM/dd/yyyy HH:mm")</dd>
+        <dt class="col-sm-2">Arrival Time</dt>
+        <dd class="col-sm-10">@Model.ArrivalDateTime</dd>
 
-            <dt class="col-sm-3">Origin</dt>
-            <dd class="col-sm-9">@Model.Origin</dd>
+        <dt class="col-sm-2">Passenger</dt>
+        <dd class="col-sm-10">@Model.Passengers</dd>
 
-            <dt class="col-sm-3">Destination</dt>
-            <dd class="col-sm-9">@Model.Destination</dd>
-        </dl>
-    </div>
+        <dt class="col-sm-2">SeatNumber</dt>
+        <dd class="col-sm-10">@Model.SeatNumber</dd>
+
+        <dt class="col-sm-2">Price</dt>
+        <dd class="col-sm-10">@Model.Price</dd>
+
+    </dl>
+
+    <a asp-controller="Flight" asp-action="Edit" asp-route-id="@Model.Id" class="btn-primary">Edit</a>
+    <a asp-controller="Flight" asp-action="Index" class="btn btn-secondary">Back to List</a>
+
 </div>

@@ -6,7 +6,7 @@ using GBC_Travel_Group_76.Models;
 using GBC_Travel_Group_76.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace FlightApp.Controllers
+namespace AppFlight.Controllers
 {
     public class FlightController : Controller
     {
@@ -17,11 +17,10 @@ namespace FlightApp.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        
         public IActionResult Index()
         {
-            var flight = _context.Flight.ToList();
-            return View(flight);
+            return View();
         }
 
         [HttpGet]
