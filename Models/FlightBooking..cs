@@ -9,7 +9,7 @@ namespace GBC_Travel_Group_76.Models
         public int PassengerId { get; set; }
 
         [Required]
-        public string PassengerName { get; set; }
+        public string? PassengerName { get; set; }
 
         [Required]
         public int FlightId { get; set; }

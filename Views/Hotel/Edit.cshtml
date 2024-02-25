@@ -1,0 +1,54 @@
+﻿@model GBC_Travel_Group_76.Models.Hotel
+
+<h2>Edit Hotel</h2>
+
+@using (Html.BeginForm("Edit", "Hotel", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Hotel</h4>
+        <hr />
+        <div class="form-group">
+            <label asp-for="Name" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Location" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PricePerNight" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PricePerNight" class="form-control" />
+                <span asp-validation-for="PricePerNight" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Rating" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Rating" class="form-control" />
+                <span asp-validation-for="Rating" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

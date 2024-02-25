@@ -1,0 +1,35 @@
+﻿@model List<GBC_Travel_Group_76.Models.Hotel>
+
+<h2>Hotels</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Price Per Night</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hotel in Model)
+        {
+            <tr>
+                <td>@hotel.Name</td>
+                <td>@hotel.Location</td>
+                <td>@hotel.PricePerNight</td>
+                <td>@hotel.Rating</td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = hotel.Id }) |
+                    @Html.ActionLink("Edit", "Edit", new { id = hotel.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = hotel.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

@@ -1,24 +1,70 @@
 ﻿@*
 *@
 @{
-    var name = "Ferdos Nurhusien";
-    var studId = "101401294";
-    var courseCode = "Comp2139";
-   
+    var name1 = "Ferdos Nurhusien";
+    var studId1 = "101401294";
+    var courseCode1 = "COMP2139";
 
+    var name2 = "Kate Labis";
+    var studId2 = "101413112";
+    var courseCode2 = "COMP2139";
 }
 
-<DOCTYPE html>
-    <html>
-    <head>
-        <title></title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding-top: 50px;
+        }
 
-    </head>
-    <body>
-        <h1>Welcome To Qatar Airline</h1>
-        <p>Name:@name</p>
-        <p>Student Id:@studId</p>
-        <p>Course Code:@courseCode</p>
-    </body>
+        h1 {
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+
+            .content > div {
+                width: 45%;
+            }
+
+        h2 {
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To Qatar Airline</h1>
+    <div class="content">
+        <div>
+            <h2>Student 1</h2>
+            <p>Name: @name1</p>
+            <p>Student Id: @studId1</p>
+            <p>Course Code: @courseCode1</p>
+        </div>
+        <div>
+            <h2>Student 2</h2>
+            <p>Name: @name2</p>
+            <p>Student Id: @studId2</p>
+            <p>Course Code: @courseCode2</p>
+        </div>
+    </div>
+</body>
 </html>
-</DOCTYPE>
+
