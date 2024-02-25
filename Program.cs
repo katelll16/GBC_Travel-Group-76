@@ -1,3 +1,7 @@
+using GBC_Travel_Group_76.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
+
 namespace GBC_Travel_Group_76
 {
     public class Program
@@ -8,6 +12,10 @@ namespace GBC_Travel_Group_76
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+               options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
             var app = builder.Build();
 

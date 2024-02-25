@@ -1,0 +1,28 @@
+﻿@model GBC_Travel_Group_76.Models.Flight
+@{
+}
+@{
+    ViewData["Title"] = "Search Flights";
+}
+
+<h1>@ViewData["Title"]</h1>
+[HTTPGET]
+<form asp-controller="Flight" asp-action="Search" method="post">
+    <div class="form-group">
+        <label for="departureLocation">Departure Location:</label>
+        <input type="text" id="departureLocation" name="departureLocation" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="arrivalLocation">Destination:</label>
+        <input type="text" id="arrivalLocation" name="arrivalLocation" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" name="departureDate" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="numberOfPassengers">Number of Passengers:</label>
+        <input type="number" id="numberOfPassengers" name="numberOfPassengers" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

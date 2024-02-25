@@ -17,14 +17,31 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <form class="d-flex" asp controller="home" asp action"General search" method"get">
+                    <input class="form-control" type="text" placeholder="search" name="searching" />
+                    <select class=" form-control btn btn-secondary " name="searchtype" />
+                    <action value="Flight">Flight</action>
+                    <action value="Booking">Booking</action>
+                   <select/>
+                   <button class="btn"></button>
+                </form>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class=" <i class=" fa-solid fa-house"></i>Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About"><i class=" <i class="fa-solid fa-list-check"></i>About</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Flight" asp-action="Index"><i class="<i class=" fa-solid fa-plane"></i>Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="CarRent" asp-action="Index"><i class=" <i class=" fa-solid fa-car"></i>Car Rent</a>
+                        </li>
+                       
+                       
                     </ul>
                 </div>
             </div>

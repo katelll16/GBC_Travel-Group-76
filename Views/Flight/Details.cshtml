@@ -1,0 +1,28 @@
+﻿@model GBC_Travel_Group_76.Models.Flight
+
+@{
+    ViewData["Title"] = "Flight Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">@Model.Airline</h3>       
+
+        <dl class="row">          
+
+            <dt class="col-sm-3">Departure Date & Time</dt>
+            <dd class="col-sm-9">@Model.DepartureDateTime.ToString("MM/dd/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Arrival Date & Time</dt>
+            <dd class="col-sm-9">@Model.ArrivalDateTime.ToString("MM/dd/yyyy HH:mm")</dd>
+
+            <dt class="col-sm-3">Origin</dt>
+            <dd class="col-sm-9">@Model.Origin</dd>
+
+            <dt class="col-sm-3">Destination</dt>
+            <dd class="col-sm-9">@Model.Destination</dd>
+        </dl>
+    </div>
+</div>

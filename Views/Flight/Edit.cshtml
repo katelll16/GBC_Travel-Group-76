@@ -1,0 +1,19 @@
+﻿@model GBC_Travel_Group_76.Models.Booking
+
+<h1>Edit Booking</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="PassengerId" />
+    <div class="form-group">
+        <label asp-for="PassengerName">Passenger Name:</label>
+        <input asp-for="PassengerName" class="form-control" />
+        <span asp-validation-for="PassengerName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FlightId">Flight ID:</label>
+        <input asp-for="FlightId" class="form-control" />
+        <span asp-validation-for="FlightId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label
+</form>

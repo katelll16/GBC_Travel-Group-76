@@ -1,0 +1,23 @@
+﻿@model GBC_Travel_Group_76.Models.CarRent
+
+
+
+@{
+    ViewData["Title"] = "Booking Confirmation";
+}
+
+<div class="container">
+    <h2>Booking Confirmation</h2>
+
+    <p>Your booking has been confirmed. Details:</p>
+
+    <ul>
+        <li><strong>Pick Up Location:</strong> @Model.PickUpLocation</li>
+        <li><strong>Drop Off Location:</strong> @Model.DropOffLocation</li>
+        <li><stronG>NPrice Per Day:</stronG> @Model.Price</li>
+    </ul>
+
+    <p>Thank you for choosing our Car Rental!</p>
+</div>
+
+
